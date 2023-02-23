@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../components/component.dart';
-import '../components/wave_clip.dart';
+import '../components/wave_clips.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
