@@ -7,6 +7,8 @@ class DefaultTextField extends StatelessWidget {
   final Widget? sufix;
   final TextInputType? keyboardtype;
   bool passwordVisible = false;
+  final TextEditingController? controller;
+  final String? Function(String?)? validator;
 
   DefaultTextField({
     Key? key,
@@ -16,6 +18,8 @@ class DefaultTextField extends StatelessWidget {
     this.sufix,
     this.keyboardtype,
     this.passwordVisible = false,
+    this.controller,
+    this.validator,
   }) : super(key: key);
 
   @override
@@ -23,6 +27,8 @@ class DefaultTextField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: TextFormField(
+        controller: controller,
+        validator: validator,
         obscureText: passwordVisible,
         //  obscureText: passwordVisible,
         keyboardType: keyboardtype,
@@ -56,14 +62,17 @@ Widget defulteButton({
         color: background,
       ),
       width: width,
-      child: MaterialButton(
-        onPressed: onPressed,
-        child: Text(
-          isUpperCase ? text.toUpperCase() : text,
-          style: const TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.w800,
-            color: Colors.white,
+      height: 45,
+      child: InkWell(
+        onTap: onPressed,
+        child: Center(
+          child: Text(
+            isUpperCase ? text.toUpperCase() : text,
+            style: const TextStyle(
+              fontSize: 20.0,
+              fontWeight: FontWeight.w800,
+              color: Colors.white,
+            ),
           ),
         ),
       ),
