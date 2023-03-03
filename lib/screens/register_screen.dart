@@ -95,7 +95,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       keyboardtype: TextInputType.phone,
                       hintText: 'Phone Number',
                       labelText: 'Phone Number',
-                      prefixIcon: Icon(
+                      prefixIcon: const Icon(
                         Icons.phone,
                         size: 20,
                       ),

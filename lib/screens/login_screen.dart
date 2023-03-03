@@ -3,6 +3,7 @@ import 'package:login_app/screens/register_screen.dart';
 
 import '../components/component.dart';
 import '../components/wave_clips.dart';
+import 'animated._list.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -41,7 +42,7 @@ class _RegisterScreenState extends State<LoginScreen> {
                       child: Padding(
                         padding: EdgeInsets.only(bottom: 40),
                         child: Text(
-                          'Register',
+                          'Login',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 40,
@@ -113,6 +114,11 @@ class _RegisterScreenState extends State<LoginScreen> {
                           print(emailcontroller.text);
                           print(passwordcontroller.text);
                         }
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Animated_List()),
+                        );
                       },
                     ),
                     const SizedBox(

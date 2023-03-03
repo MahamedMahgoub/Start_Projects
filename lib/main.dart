@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_app/screens/animated._list.dart';
 import 'package:login_app/screens/login_screen.dart';
 
 void main() {
